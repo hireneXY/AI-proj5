@@ -1,0 +1,26 @@
+# 数据文件
+data/
+*.pth
+*.pkl
+*.h5
+
+# 训练生成的文件与结果
+results/
+saved_models/
+
+# Python缓存和虚拟环境
+__pycache__/
+*.py[cod]
+.pytest_cache/
+venv/
+env/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# IDE相关
+.vscode/
+.idea/
+*.swp
+*.swo

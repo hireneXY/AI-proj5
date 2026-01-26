@@ -1,0 +1,7 @@
+2026-01-26 21:45:52,918 - late - INFO - Starting multimodal sentiment classification experiment
+2026-01-26 21:45:52,918 - late - INFO - Model type: late
+2026-01-26 21:45:52,918 - late - INFO - Config: AbsoluteConfig(data_dir='/mnt/workspace/multimodel_experiment/data', dataset_subdir='dataset', train_file='/mnt/workspace/multimodel_experiment/data/train.txt', test_file='/mnt/workspace/multimodel_experiment/data/test_without_label.txt', text_model_name='/mnt/workspace/models/bert-base-uncased', image_model_name='resnet50', num_classes=3, text_finetune=True, image_finetune=True, text_hidden=256, image_hidden=256, max_seq_length=128, text_feature_dim=768, image_size=224, image_feature_dim=2048, batch_size=32, num_epochs=20, learning_rate=0.0001, weight_decay=1e-05, dropout_rate=0.3, fusion_hidden_dim=512, fusion_type='late', val_ratio=0.2, seed=42, early_stop_patience=5, device='cuda', model_save_dir='saved_models', results_dir='results', log_dir='logs')
+2026-01-26 21:45:52,918 - late - INFO - Device: cuda
+2026-01-26 21:45:53,903 - late - INFO - Created late model
+2026-01-26 21:45:53,904 - late - INFO - Model parameters: 133,713,224
+2026-01-26 21:45:54,135 - late - INFO - Starting training...

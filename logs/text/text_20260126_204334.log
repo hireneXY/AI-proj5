@@ -1,0 +1,15 @@
+2026-01-26 20:43:34,754 - text - INFO - Starting multimodal sentiment classification experiment
+2026-01-26 20:43:34,754 - text - INFO - Model type: text
+2026-01-26 20:43:34,754 - text - INFO - Config: AbsoluteConfig(data_dir='/mnt/workspace/multimodel_experiment/data', dataset_subdir='dataset', train_file='/mnt/workspace/multimodel_experiment/data/train.txt', test_file='/mnt/workspace/multimodel_experiment/data/test_without_label.txt', text_model_name='/mnt/workspace/models/bert-base-uncased', image_model_name='resnet50', num_classes=3, text_finetune=True, image_finetune=True, text_hidden=256, image_hidden=256, max_seq_length=128, text_feature_dim=768, image_size=224, image_feature_dim=2048, batch_size=32, num_epochs=20, learning_rate=0.0001, weight_decay=1e-05, dropout_rate=0.3, fusion_hidden_dim=512, fusion_type='text', val_ratio=0.2, seed=42, early_stop_patience=5, device='cuda', model_save_dir='saved_models', results_dir='results', log_dir='logs')
+2026-01-26 20:43:34,754 - text - INFO - Device: cuda
+2026-01-26 20:43:35,428 - text - INFO - Created text model
+2026-01-26 20:43:35,428 - text - INFO - Model parameters: 109,679,875
+2026-01-26 20:43:35,633 - text - INFO - Starting training...
+2026-01-26 20:43:57,759 - text - INFO - Epoch 1 Train - Loss: 0.9278, Acc: 0.5887, F1: 0.4508
+2026-01-26 20:44:06,829 - text - INFO - Epoch 1 Val - Loss: 0.9115, Acc: 0.5975, F1: 0.4470
+2026-01-26 20:44:28,887 - text - INFO - Epoch 2 Train - Loss: 0.9147, Acc: 0.5975, F1: 0.4487
+2026-01-26 20:44:30,894 - text - INFO - Epoch 2 Val - Loss: 0.9087, Acc: 0.5975, F1: 0.4470
+2026-01-26 20:44:53,168 - text - INFO - Epoch 3 Train - Loss: 0.9200, Acc: 0.5969, F1: 0.4462
+2026-01-26 20:44:55,200 - text - INFO - Epoch 3 Val - Loss: 0.9074, Acc: 0.5975, F1: 0.4470
+2026-01-26 20:45:17,552 - text - INFO - Epoch 4 Train - Loss: 0.9144, Acc: 0.5969, F1: 0.4463
+2026-01-26 20:45:19,588 - text - INFO - Epoch 4 Val - Loss: 0.9081, Acc: 0.5975, F1: 0.4470

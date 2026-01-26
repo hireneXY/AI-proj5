@@ -1,0 +1,25 @@
+2026-01-26 23:12:32,998 - late - INFO - Starting multimodal sentiment classification experiment
+2026-01-26 23:12:32,998 - late - INFO - Model type: late
+2026-01-26 23:12:32,998 - late - INFO - Config: AbsoluteConfig(data_dir='/mnt/workspace/multimodel_experiment/data', dataset_subdir='dataset', train_file='/mnt/workspace/multimodel_experiment/data/train.txt', test_file='/mnt/workspace/multimodel_experiment/data/test_without_label.txt', text_model_name='/mnt/workspace/models/bert-base-uncased', image_model_name='resnet50', num_classes=3, text_finetune=True, image_finetune=True, text_hidden=256, image_hidden=256, max_seq_length=128, text_feature_dim=768, image_size=224, image_feature_dim=2048, batch_size=32, num_epochs=20, learning_rate=0.0001, weight_decay=1e-05, dropout_rate=0.3, fusion_hidden_dim=512, fusion_type='late', val_ratio=0.2, seed=42, early_stop_patience=5, device='cuda', model_save_dir='saved_models', results_dir='results', log_dir='logs')
+2026-01-26 23:12:32,998 - late - INFO - Device: cuda
+2026-01-26 23:12:33,970 - late - INFO - Created late model
+2026-01-26 23:12:33,972 - late - INFO - Model parameters: 133,171,016
+2026-01-26 23:12:34,199 - late - INFO - Starting training...
+2026-01-26 23:12:41,066 - late - INFO - Epoch 1 Train - Loss: 0.9898, Acc: 0.1334, F1: 0.1315
+2026-01-26 23:12:50,880 - late - INFO - Epoch 1 Val - Loss: 0.9913, Acc: 0.1166, F1: 0.0243
+2026-01-26 23:12:57,229 - late - INFO - Epoch 2 Train - Loss: 0.9106, Acc: 0.2423, F1: 0.2367
+2026-01-26 23:13:06,289 - late - INFO - Epoch 2 Val - Loss: 0.9385, Acc: 0.2331, F1: 0.1296
+2026-01-26 23:13:12,716 - late - INFO - Epoch 3 Train - Loss: 0.7538, Acc: 0.3190, F1: 0.2944
+2026-01-26 23:13:22,019 - late - INFO - Epoch 3 Val - Loss: 1.0244, Acc: 0.2822, F1: 0.1515
+2026-01-26 23:13:28,399 - late - INFO - Epoch 4 Train - Loss: 0.5266, Acc: 0.4908, F1: 0.4895
+2026-01-26 23:13:37,700 - late - INFO - Epoch 4 Val - Loss: 0.9961, Acc: 0.4172, F1: 0.4593
+2026-01-26 23:13:44,084 - late - INFO - Epoch 5 Train - Loss: 0.3538, Acc: 0.7163, F1: 0.7097
+2026-01-26 23:13:53,393 - late - INFO - Epoch 5 Val - Loss: 1.1089, Acc: 0.5153, F1: 0.5480
+2026-01-26 23:13:59,805 - late - INFO - Epoch 6 Train - Loss: 0.2139, Acc: 0.8742, F1: 0.8576
+2026-01-26 23:14:09,727 - late - INFO - Epoch 6 Val - Loss: 1.5149, Acc: 0.6319, F1: 0.6223
+2026-01-26 23:14:16,182 - late - INFO - Epoch 7 Train - Loss: 0.1561, Acc: 0.9371, F1: 0.9300
+2026-01-26 23:14:16,839 - late - INFO - Epoch 7 Val - Loss: 1.4604, Acc: 0.6319, F1: 0.6290
+2026-01-26 23:14:16,839 - late - INFO - Early stopping triggered at epoch 7
+2026-01-26 23:14:16,839 - late - INFO - Training completed. Best validation accuracy: 0.6319
+2026-01-26 23:14:16,839 - late - INFO - 生成测试集预测...
+2026-01-26 23:14:17,299 - late - INFO - 预测保存到: results/test_predictions_late.csv

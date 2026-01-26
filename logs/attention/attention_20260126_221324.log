@@ -1,0 +1,25 @@
+2026-01-26 22:13:24,238 - attention - INFO - Starting multimodal sentiment classification experiment
+2026-01-26 22:13:24,238 - attention - INFO - Model type: attention
+2026-01-26 22:13:24,238 - attention - INFO - Config: AbsoluteConfig(data_dir='/mnt/workspace/multimodel_experiment/data', dataset_subdir='dataset', train_file='/mnt/workspace/multimodel_experiment/data/train.txt', test_file='/mnt/workspace/multimodel_experiment/data/test_without_label.txt', text_model_name='/mnt/workspace/models/bert-base-uncased', image_model_name='resnet50', num_classes=3, text_finetune=True, image_finetune=True, text_hidden=256, image_hidden=256, max_seq_length=128, text_feature_dim=768, image_size=224, image_feature_dim=2048, batch_size=32, num_epochs=20, learning_rate=0.0001, weight_decay=1e-05, dropout_rate=0.3, fusion_hidden_dim=512, fusion_type='attention', val_ratio=0.2, seed=42, early_stop_patience=5, device='cuda', model_save_dir='saved_models', results_dir='results', log_dir='logs')
+2026-01-26 22:13:24,238 - attention - INFO - Device: cuda
+2026-01-26 22:13:25,239 - attention - INFO - Created attention model
+2026-01-26 22:13:25,241 - attention - INFO - Model parameters: 136,010,051
+2026-01-26 22:13:25,471 - attention - INFO - Starting training...
+2026-01-26 22:13:32,369 - attention - INFO - Epoch 1 Train - Loss: 0.9383, Acc: 0.6227, F1: 0.4779
+2026-01-26 22:13:41,735 - attention - INFO - Epoch 1 Val - Loss: 0.9095, Acc: 0.6258, F1: 0.4817
+2026-01-26 22:13:48,119 - attention - INFO - Epoch 2 Train - Loss: 0.9221, Acc: 0.6227, F1: 0.4779
+2026-01-26 22:13:48,763 - attention - INFO - Epoch 2 Val - Loss: 0.8993, Acc: 0.6258, F1: 0.4817
+2026-01-26 22:13:55,180 - attention - INFO - Epoch 3 Train - Loss: 0.8724, Acc: 0.6304, F1: 0.5062
+2026-01-26 22:13:55,823 - attention - INFO - Epoch 3 Val - Loss: 0.8554, Acc: 0.6196, F1: 0.5796
+2026-01-26 22:14:02,246 - attention - INFO - Epoch 4 Train - Loss: 0.6995, Acc: 0.7147, F1: 0.6779
+2026-01-26 22:14:12,042 - attention - INFO - Epoch 4 Val - Loss: 0.9045, Acc: 0.6933, F1: 0.6404
+2026-01-26 22:14:18,498 - attention - INFO - Epoch 5 Train - Loss: 0.4668, Acc: 0.8052, F1: 0.7684
+2026-01-26 22:14:19,146 - attention - INFO - Epoch 5 Val - Loss: 0.9885, Acc: 0.6442, F1: 0.6474
+2026-01-26 22:14:25,574 - attention - INFO - Epoch 6 Train - Loss: 0.3438, Acc: 0.8773, F1: 0.8810
+2026-01-26 22:14:26,229 - attention - INFO - Epoch 6 Val - Loss: 1.7728, Acc: 0.6503, F1: 0.6018
+2026-01-26 22:14:32,691 - attention - INFO - Epoch 7 Train - Loss: 0.3449, Acc: 0.8988, F1: 0.9008
+2026-01-26 22:14:33,346 - attention - INFO - Epoch 7 Val - Loss: 1.1932, Acc: 0.6503, F1: 0.6297
+2026-01-26 22:14:33,346 - attention - INFO - Early stopping triggered at epoch 7
+2026-01-26 22:14:33,347 - attention - INFO - Training completed. Best validation accuracy: 0.6933
+2026-01-26 22:14:33,347 - attention - INFO - 生成测试集预测...
+2026-01-26 22:14:33,812 - attention - INFO - 预测保存到: results/test_predictions_attention.csv
