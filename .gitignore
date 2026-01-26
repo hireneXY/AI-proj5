@@ -1,25 +1,35 @@
-# 数据文件
-data/
+# 大模型文件
 *.pth
 *.pkl
+*.bin
 *.h5
+*.ckpt
 
-# 训练生成的文件与结果
+# 数据文件
+data/
+*.zip
+*.tar.gz
+
+# 训练生成文件
 results/
 saved_models/
+checkpoints/
 
-# Python缓存和虚拟环境
+# Python缓存
 __pycache__/
 *.py[cod]
 .pytest_cache/
+
+# 环境配置
 venv/
 env/
+*.env
 
 # 系统文件
 .DS_Store
 Thumbs.db
 
-# IDE相关
+# IDE
 .vscode/
 .idea/
 *.swp
