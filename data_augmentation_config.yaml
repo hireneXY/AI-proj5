@@ -1,0 +1,85 @@
+# 数据增强优化配置
+data:
+  data_dir: "D:/25人工智能/project5/data"
+  train_label_file: "./labels/train.txt"
+  test_label_file: "./labels/test_without_label.txt"
+  output_dir: "./experiments"
+  processed_dir: "./data/processed"
+  train_split: 0.8
+  val_split: 0.2
+  random_seed: 42
+  max_seq_length: 128
+  text_model_name: "bert-base-uncased"
+  image_size: 224
+  image_model_name: "resnet50"
+
+model:
+  name: "misa"
+  hidden_dim: 256
+  dropout: 0.3
+  misa:
+    shared_dim: 128
+    private_dim: 128
+    use_reconstruction: true
+    use_adversarial: false
+  classifier_layers:
+    - 256
+    - 128
+
+training:
+  batch_size: 4
+  num_epochs: 8
+  learning_rate: "2e-5"
+  weight_decay: 0.01
+  scheduler: "cosine"
+  warmup_ratio: 0.1
+  min_lr: "1e-7"
+
+  # 类别权重
+  class_weights:
+    negative: 2.0
+    neutral: 1.5
+    positive: 1.0
+
+  loss_weights:
+    classification: 1.0
+    reconstruction: 0.1
+    similarity: 0.1
+    difference: 0.05
+    focal_loss_gamma: 2.0
+
+  early_stopping:
+    enabled: true
+    patience: 7
+    min_delta: 0.001
+
+  checkpoint:
+    save_best_only: true
+    save_every_epoch: false
+    monitor: "val_f1_macro"
+    save_experiment_info: true
+    include_timestamp: true
+
+  # 数据增强配置
+  augmentation:
+    image:
+      random_crop: true
+      random_flip: true
+      color_jitter: true
+      rotation: 15
+    text:
+      synonym_replace: 0.1
+      random_delete: 0.05
+
+device:
+  use_cuda: false
+  num_workers: 0
+  mixed_precision: false
+
+logging:
+  log_dir: "./outputs/logs"
+  use_tensorboard: false
+  use_wandb: false
+  log_frequency: 10
+
+
